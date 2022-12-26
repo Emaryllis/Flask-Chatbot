@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/chatbot.css')}}">
+	<title>Chatbot</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="chatbox">
+			<div class="chatSupport">
+				<div class="chatHeader">
+					<div class="chatImageHeader"><img src="{{url_for('static', filename='img/botPhoto.png')}}"
+							alt="image"></div>
+					<div>
+						<h4 class="chatHeadingHeader">Chat Support</h4>
+						<p class="chatbox__description--header">24/7 Support</p>
+					</div>
+				</div>
+				<div class="chatMsgs">
+					<div>
+						<div class="messages__item messages__item--operator">Hello! How may I help you? </div>
+						<div class="messages__item messages__item--visitor"> Can you let me talk to the support? </div>
+						<div class="messages__item messages__item--operator"> Sure! </div>
+						<div class="messages__item messages__item--visitor"> Need your help, I need a developer in my
+							site. </div>
+						<div class="messages__item messages__item--operator"> Hi... What is it? I'm a front-end
+							developer, yay! </div>
+						<div class="messages__item messages__item--visitor"> Need your help, I need a developer in my
+							site. </div>
+						<div class="messages__item messages__item--operator"> Hi... What is it? I'm a front-end
+							developer, yay! </div>
+					</div>
+				</div>
+				<form onkeydown="if(event.key=='Enter');">
+					<div class="chatbox__footer"><input type="text" placeholder="Message chat support..."
+							id="chatInput">
+						<p class="chatbox__send--footer"><button id="chatSubmit" type="button"
+								onclick="inputSubmit()">Send</button></p>
+					</div>
+				</form>
+			</div>
+			<div class="chatButton">
+				<button><img src="{{url_for('static', filename='img/icons/chatbox-icon.svg')}}"
+						alt="Chat Support button"></button>
+			</div>
+		</div>
+	</div>
+	<script src="{{url_for('static', filename='js/chatbot.js')}}"></script>
+</body>
+
+</html>
